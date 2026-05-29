@@ -10,4 +10,15 @@ spec:
         - name: retreat-cart
           image: registry.polacoproject.net/retreat-cart:latest # kustomize will patch
           ports:
-            - containerPort: 8080
+            - containerPort: 8000
+          env:
+            - name: RETREAT_EMAIL
+              valueFrom:
+                secretKeyRef:
+                  name: retreat-credentials
+                  key: email
+            - name: RETREAT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: retreat-credentials
+                  key: password

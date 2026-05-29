@@ -4,13 +4,16 @@ kind: Kustomization
 namespace: retreat
 
 resources:
-  - namespace.yaml
-  - deployment.yaml
-  - ingress.yaml
-  - service.yaml
+- namespace.yaml
+- deployment.yaml
+- ingress.yaml
+- service.yaml
 
 labels:
-  - includeTemplates: true
-  - includeSelectors: true
-    pairs:
-      app: retreat-cart
+- includeTemplates: true
+- includeSelectors: true
+  pairs:
+    app: retreat-cart
+images:
+- name: registry.polacoproject.net/retreat-cart
+  newTag: 4eb5c78
