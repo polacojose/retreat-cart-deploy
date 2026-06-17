@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: retreat-cart
+  name: retreat-cart-api
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: retreat-cart
-          image: registry.polacoproject.net/retreat-cart:latest # kustomize will patch
+        - name: retreat-cart-api
+          image: registry.polacoproject.net/retreat-cart-api:latest # kustomize will patch
           ports:
             - containerPort: 8000
           env:

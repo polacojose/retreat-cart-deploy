@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: retreat
+namespace: retreat-cart
 
 resources:
 - namespace.yaml
@@ -13,7 +13,7 @@ labels:
 - includeTemplates: true
 - includeSelectors: true
   pairs:
-    app: retreat-cart
+    app: retreat-cart-api
 images:
-- name: registry.polacoproject.net/retreat-cart
+- name: registry.polacoproject.net/retreat-cart-api
   newTag: 4eb5c78
