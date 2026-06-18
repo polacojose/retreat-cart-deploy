@@ -16,4 +16,4 @@ labels:
     app: retreat-cart-api
 images:
 - name: registry.polacoproject.net/retreat-cart-api
-  newTag: 4eb5c78
+  newTag: "7819334"
